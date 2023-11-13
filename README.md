@@ -14,7 +14,7 @@ The following scenario is outlined:
     - A _Reader_ role.
     - An _Admin_ role.
 
-- **Booking API**
+- **Bookings API**
   - Consumes the Payments API through a **Client Credentials** flow.
     - Acquires an access_token from the Entra `/token` endpoint and utilizes it to gain access to the Payments API.
   - Has the Payments API _Reader_ Role assigned.
