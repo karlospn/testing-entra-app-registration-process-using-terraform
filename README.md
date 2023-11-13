@@ -156,4 +156,4 @@ And if you inspect the received access token from Entra, you can verify that the
 
 - The issuer should match your Entra ID tenant, formatted as: https://login.microsoftonline.com/{tenant-id}/v2.0"
 - The audience should match the client ID of the Payments API.
-- It must have a "Reader" role, as Jane is assigned the "Reader" role in the Payments API. If you log in as John, you will possess an "Admin" role instead of a "Reader" role."
+- It must have a "Reader" role, as Jane is assigned the "Reader" role in the Payments API. If you log in as John, you will possess an "Admin" role instead of a "Reader" role.
