@@ -118,7 +118,7 @@ curl -k -X POST \
 
 ## **Testing the FrontEnd SPA Authorization Code flow with PKCE**
 
-To easily test and Authorization Code flow with PKE we're going to use this website:
+To easily test an Authorization Code flow with PKCE we're going to use this website:
 
 - https://oidcdebugger.com/
 
