@@ -8,7 +8,7 @@ The following scenario is outlined:
 
 - **Payments API**
   - Exposes 2 scopes:
-    - _payment.write_ scope.
+    - _payment.write_ scope. It requires admin consent to be used.
     - _payment.read_ scope.
   - It has 2 app roles:
     - A _Reader_ role.
@@ -22,7 +22,7 @@ The following scenario is outlined:
 - **FrontEnd SPA**
   - A Single Page Application.
     - Utilizes an **Authorization Code flow with PKCE** to obtain an access token and uses it to access the Payments API.
-  - The FrontEnd SPA app is granted permission only to request the `payment.write` scope.
+  - The FrontEnd SPA app is granted permission only to request the `payment.read` scope.
 
 - **User Permissions**
   - Two users are registered in my Entra:
@@ -130,25 +130,25 @@ Once you click submit, it will redirect you to Entra, where you'll need to log i
 
 ```javascript
 {
-  "aud": "2034f5fd-8e85-48f0-8282-983ee03319b5",
+  "aud": "c90ce23f-68ad-4e29-a134-13e40676b5ea",
   "iss": "https://login.microsoftonline.com/8a0671e2-3a30-4d30-9cb9-ad709b9c744a/v2.0",
-  "iat": 1699875872,
-  "nbf": 1699875872,
-  "exp": 1699879801,
-  "aio": "AUQAu/8VAAAA08xo4ln4uUih+NlH44K4IF0O+d5Pib67ko9q+HksOcSeDlTVjhxBEl5e5fwSH7S70sMlpXXidbR4cDfYAGLxbQ==",
-  "azp": "3e3d6cd6-e7b4-4394-81bc-17e4fa0c72d6",
+  "iat": 1700053398,
+  "nbf": 1700053398,
+  "exp": 1700058919,
+  "aio": "AUQAu/8VAAAAM9n6UAtue+BBe0M/eeOhHxJJIJK6nvxZuuxtTDKYKMLIad0Oa8v2m7hSUlHeBE2WOpjHACzbvkEnb7V+OJpzcw==",
+  "azp": "e13242fb-4b3a-4337-a92f-d9f435dcc43b",
   "azpacr": "0",
   "name": "jane",
   "oid": "0a92ffc5-9551-47a0-baf0-7f3352eac015",
   "preferred_username": "jane@carlosponsnoutlook.onmicrosoft.com",
-  "rh": "0.AR8A4nEGijA6ME2cua1wm5x0Sv31NCCFjvBIgoKYPuAzGbUfAAc.",
+  "rh": "0.AR8A4nEGijA6ME2cua1wm5x0Sj_iDMmtaClOoTQT5AZ2teofAAc.",
   "roles": [
     "Reader"
   ],
-  "scp": "payment.write",
-  "sub": "ivrR0VeZR97QmF8h26WrjyOsPjcUdrhhTHyvYbeJt4Q",
+  "scp": "payment.read",
+  "sub": "9-U8mZ7iqRPd31tYsO0d4sGj4sYwd4-RjVfP361kvTg",
   "tid": "8a0671e2-3a30-4d30-9cb9-ad709b9c744a",
-  "uti": "E7EB8CFhCkGuRA4WzrItAA",
+  "uti": "bYwFTTO1xkqWHz79FUyVAA",
   "ver": "2.0"
 }
 ```
