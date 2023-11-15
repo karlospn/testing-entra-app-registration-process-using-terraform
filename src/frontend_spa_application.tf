@@ -10,7 +10,7 @@ resource "azuread_application" "frontend_spa_application" {
         resource_app_id = azuread_application.payments_api_application.client_id
 
         resource_access {
-            id   = azuread_application.payments_api_application.oauth2_permission_scope_ids["payment.write"]
+            id   = azuread_application.payments_api_application.oauth2_permission_scope_ids["payment.read"]
             type = "Scope"
         }
     }
@@ -29,6 +29,6 @@ resource "azuread_application_pre_authorized" "frontend_spa_preauthorized" {
   authorized_client_id = azuread_application.frontend_spa_application.client_id
 
   permission_ids = [
-    random_uuid.payments_write_scope_id.result
+    random_uuid.payments_read_scope_id.result
   ]
 }
